@@ -5,7 +5,7 @@ function Admin({ token }) {
 
     useEffect(() => {
         async function fetchInquiries() {
-            const response = await fetch("http://localhost:3000/api/inquiries", {
+            const response = await fetch("https://galleon-api-production.up.railway.app/api/inquiries", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 },
@@ -17,7 +17,7 @@ function Admin({ token }) {
     }, [token]);
 
     async function markAsReplied(id) {
-        const response = await fetch(`http://localhost:3000/api/inquiries/${id}`, {
+        const response = await fetch(`https://galleon-api-production.up.railway.app/api/inquiries/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             },
