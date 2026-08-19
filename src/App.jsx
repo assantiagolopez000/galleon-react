@@ -6,7 +6,18 @@ import Login from "./pages/Login";
 import Admin from "./pages/Admin";
 
 function App() {
-  const [token, setToken] = useState(null);
+  // const [token, setToken] = useState(null);
+  const [token, setToken] = useState(() => localStorage.getItem("token"));
+
+  function handleLogin(newToken) {
+    localStorage.setItem("token", newToken);
+    setToken(newToken);
+  }
+
+  function handleLogout() {
+    localStorage.removeItem("token")
+    setToken(null);
+  }
 
   return (
     <BrowserRouter>
@@ -14,7 +25,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route 
           path="/admin" 
-          element={token ? <Admin token={token} /> : <Login onLogin={setToken} />} 
+          element={token ? <Admin token={token} onLogout={handleLogout} /> : <Login onLogin={handleLogin} />} 
         />
       </Routes>
     </BrowserRouter>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-function Admin({ token }) {
+
+function Admin({ token, onLogout }) {
     const [inquiries, setInquiries] = useState([]);
 
     useEffect(() => {
@@ -47,6 +48,7 @@ function Admin({ token }) {
                     </li>
                 ))}
             </ul>
+            <button type="button" className="logout-button" onClick={onLogout}>Logout</button>
         </div>
     );
 }
