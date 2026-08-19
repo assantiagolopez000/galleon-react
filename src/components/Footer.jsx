@@ -20,6 +20,8 @@ function Footer() {
                     <a href="#" className="policy-link">Satisfaction Guarantee</a>
                     <span className="separator">|</span>
                     <a href="#" className="policy-link">Licensed & Insured</a>
+                    <span className="separator">|</span>
+                    <a href="/admin" className="policy-link">Staff Login</a>
                 </p>
             </div>
         </footer>
