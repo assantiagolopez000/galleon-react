@@ -882,7 +882,7 @@ header .navbar {
 
 .login-page {
     min-height: 100vh;
-    background-image: url("/public/images/header_galleon_logo.png");
+    background-image: url("/images/header_galleon_logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
