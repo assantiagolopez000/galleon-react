@@ -701,7 +701,7 @@ header .navbar {
 
 .footer-section .social-link-list .social-link:hover,
 .footer-section .policy-text .policy-link:hover {
-    color: white;
+    color: black;
 }
 
 .footer-section .policy-text .separator {
