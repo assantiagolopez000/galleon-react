@@ -26,18 +26,34 @@ function Login({ onLogin }) {
     }
 
     return (
-        <div>
-            <h1>Admin Login</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="Password"
-                />
-                <button type="submit">Log In</button>
-            </form>
-            {error && <p>{error}</p>}
+        // <div>
+        //     <h1>Admin Login</h1>
+        //     <form onSubmit={handleSubmit}>
+        //         <input
+        //             type="password"
+        //             value={password}
+        //             onChange={(e) => setPassword(e.target.value)}
+        //             placeholder="Password"
+        //         />
+        //         <button type="submit">Log In</button>
+        //     </form>
+        //     {error && <p>{error}</p>}
+        // </div>
+
+        <div className="login-page">
+            <div className="login-card">
+                <h1>Log In</h1>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        placeholder="Enter Password"
+                    />
+                    <button type="submit" className="login-button">Login</button>
+                </form>
+                <p className="login-error">{error}</p>
+            </div>
         </div>
     );
 }

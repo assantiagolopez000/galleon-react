@@ -878,3 +878,64 @@ header .navbar {
 }
 
 
+/*CSS for the login page */
+
+.login-page {
+    min-height: 100vh;
+    background-image: url("/public/images/header_galleon_logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #FAF6EF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* font-size: larger; */
+
+
+}
+
+.login-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 60px;
+    border-radius: var(--border-radius-m);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.login-card h1 {
+    margin-bottom: 20px;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-card .login-button {
+    border: 2px solid seagreen;
+    /* padding: 100px 200px; */
+    align-self: center;
+    width: fit-content;
+    padding: 5px;
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-bold);
+
+    
+}
+
+.login-card .login-button:hover {
+    background-color: seagreen;
+}
+
+.login-error {
+    margin-top: 16px;
+    min-height: 20px;
+}
