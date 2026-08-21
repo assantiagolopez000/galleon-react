@@ -940,6 +940,14 @@ header .navbar {
     min-height: 20px;
 }
 
+.login-card .back-home-link {
+    color: black;
+}
+
+.login-card .back-home-link:hover {
+    color: red;
+}
+
 
 
 /*Admin Dashboard Styling */
@@ -1019,5 +1027,17 @@ header .navbar {
 }
 
 .admin-footer .logout-button:hover {
+    color: red;
+}
+
+.admin-page .back-home-link {
+    display: flex;    
+    justify-content: flex-end;
+    margin-top: 10px;
+    font-size: large;
+    color: black;
+}
+
+.admin-page .back-home-link:hover {
     color: red;
 }

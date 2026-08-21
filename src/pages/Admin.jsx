@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 function Admin({ token, onLogout }) {
     const [inquiries, setInquiries] = useState([]);
@@ -86,6 +86,7 @@ function Admin({ token, onLogout }) {
             <div className="admin-footer">
                 <button className="logout-button" onClick={onLogout}>Logout</button>
             </div>
+            <Link to="/" className="back-home-link">Back to Home</Link>
 
         </div>
     );

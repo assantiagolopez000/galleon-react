@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 //This is the first real design decision. Since Login and Admin are two separate page components, and the token needs to be known by both (Login creates it, Admin needs to use it), it can't just live inside one component's own useState — neither page can see the other's state directly.
 //The simplest fix for now: lift the token state up into App.jsx, and pass it down to whichever page needs it.
@@ -53,7 +54,9 @@ function Login({ onLogin }) {
                     <button type="submit" className="login-button">Login</button>
                 </form>
                 <p className="login-error">{error}</p>
+                <Link to="/" className="back-home-link">Back to Home</Link>
             </div>
+            
         </div>
     );
 }
