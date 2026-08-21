@@ -939,3 +939,85 @@ header .navbar {
     margin-top: 16px;
     min-height: 20px;
 }
+
+
+
+/*Admin Dashboard Styling */
+.admin-page {
+    min-height: 100vh;
+    padding: 60px 40px;
+    background-color: #F5F0E8;
+}
+
+.admin-header h1 {
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.inquiries-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: var(--border-radius-s);
+    overflow: hidden;
+
+}
+
+.inquiries-table th,
+.inquiries-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--medium-gray-color);
+}
+
+.inquiries-table th {
+    background-color: #004225;
+    color: white;
+    text-transform: uppercase;
+    font-size: var(--font-size-s);
+
+}
+
+.admin-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.inquiries-table .replied-row {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.inquiries-table .replied-row td {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inquiries-table button {
+    padding: 8px 16px;
+    background-color: #004225;
+    color: white;
+    border-radius: var(--border-radius-s);
+    border: 1px solid #004225;
+    transition: 0.3s ease;
+}
+
+.inquiries-table button:hover {
+    background-color: transparent;
+    color: #004225;
+}
+
+.admin-footer .logout-button {
+    font-size: large;
+}
+
+.admin-footer .logout-button:hover {
+    color: red;
+}

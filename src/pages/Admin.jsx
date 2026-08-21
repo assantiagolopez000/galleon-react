@@ -34,21 +34,59 @@ function Admin({ token, onLogout }) {
     }
 
     return (
-        <div>
-            <h1>
-                Admin Dashboard
-            </h1>
-            <ul>
-                {inquiries.map((inquiry) => (
-                    <li key={inquiry.id}>
-                        <strong>{inquiry.name}</strong> ({inquiry.email}) - {inquiry.message} - {inquiry.status}
-                        {inquiry.status !== "replied" && (
-                            <button onClick={() => markAsReplied(inquiry.id)}>Mark as Replied</button>
-                        )}
-                    </li>
-                ))}
-            </ul>
-            <button type="button" className="logout-button" onClick={onLogout}>Logout</button>
+        // <div>
+        //     <h1>
+        //         Admin Dashboard
+        //     </h1>
+        //     <ul>
+        //         {inquiries.map((inquiry) => (
+        //             <li key={inquiry.id}>
+        //                 <strong>{inquiry.name}</strong> ({inquiry.email}) - {inquiry.message} - {inquiry.status}
+        //                 {inquiry.status !== "replied" && (
+        //                     <button onClick={() => markAsReplied(inquiry.id)}>Mark as Replied</button>
+        //                 )}
+        //             </li>
+        //         ))}
+        //     </ul>
+        //     <button type="button" className="logout-button" onClick={onLogout}>Logout</button>
+        // </div>
+        <div className="admin-page">
+            <div className="admin-header">
+                <h1>Admin Dashboard</h1>
+            </div>
+            <div className="table-wrapper">
+                <table className="inquiries-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {inquiries.map((inquiry) => (
+                            <tr key={inquiry.id} className={inquiry.status === "replied" ? "replied-row" : ""}>
+                                <td>{inquiry.name}</td>
+                                <td>{inquiry.email}</td>
+                                <td>{inquiry.message}</td>
+                                <td>{inquiry.status}</td>
+                                <td>
+                                    {inquiry.status !== "replied" && (
+                                        <button onClick={() => markAsReplied(inquiry.id)}>Mark as Replied</button>
+                                    )}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            
+            <div className="admin-footer">
+                <button className="logout-button" onClick={onLogout}>Logout</button>
+            </div>
+
         </div>
     );
 }
